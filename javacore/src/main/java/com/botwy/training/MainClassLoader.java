@@ -6,7 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 
-public class Main {
+public class MainClassLoader {
 
     public static void main (String...args) throws MalformedURLException, ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 
@@ -17,15 +17,6 @@ public class Main {
        // Person person_cl = (Person) clazz.newInstance();  java.lang.NoSuchMethodException: com.homework2.classes.Person.<init>()
         Person person_cl = (Person) clazz.getConstructor(boolean.class,String.class).newInstance(true,"Victor");
 
-        Person person = new Person("Victor",30);
-       // Person person1 = new Person();
-switch (person.getAge()) {
-    case 30:
-        System.out.println(30);
-    case 35:
-        System.out.println(person);
-        break;
-}
 
     }
 }
